@@ -17,18 +17,4 @@ void main(){
     client.setHeaders(headers);
     expect(client.headers,equals(headers));
   });
-
-  test('call',(){
-    var client = new JSONRPCClient(testURL);
-    var callback = (response) {
-      print(response);
-    };
-    var body = {
-      "method": "getUsername",
-      "params": {
-        "id" : 2
-      }
-    };
-    client.call(body, callback);
-  });
 }
