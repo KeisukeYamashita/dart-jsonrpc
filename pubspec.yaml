@@ -1,0 +1,7 @@
+name: dart_jsonrpc
+
+dependencies:
+  http:
+
+dev_dependencies:
+  test: "^0.12.12"
