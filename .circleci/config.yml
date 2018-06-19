@@ -21,7 +21,7 @@ references:
     save_cache:
       key: module-cache-{{ .Branch }}--{{ checksum "package.json" }}
       paths:
-        - node_modules/
+        - .pub/
 
 
   restore-modules: &restore-modules
