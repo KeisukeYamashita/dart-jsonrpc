@@ -41,7 +41,7 @@ jobs:
       - run:
           name: Run test
           command: |
-            DART_ENV=test pub run test test/*
+            pub run test test/*
       - *store-modules
 
 
