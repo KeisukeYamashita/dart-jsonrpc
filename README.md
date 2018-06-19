@@ -1,4 +1,5 @@
 # dart-jsonrpc
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CircleCI](https://circleci.com/gh/KeisukeYamashita/dart-jsonrpc.svg?style=svg&circle-token=5e4460848cf03bf59de8001ae9d7848b38cc37d2)](https://circleci.com/gh/KeisukeYamashita/dart-jsonrpc)
 
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/153320/e816b381-8c77-3937-d237-33644fbb101e.png)
