@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class JSONRPCClient {
   String url;
-  Map headers;
+  Map<String:String> headers;
 
   JSONRPCClient(url){
     this.url = url;
@@ -13,18 +13,22 @@ class JSONRPCClient {
 
 // setHeader sets header for request
   setHeaders(headers){
+    if (!(headers is Map){
+      return new TypeError();
+    }
     this.headers = headers;
   }
 
   call(method,params,callback(response)){
     var timeStamp = new DateTime.now().millisecondsSinceEpoch;
+    var client = new http.Client();
     var body = {
       'jsonrpc': "2.0",
       'method': method,
       'params': params,
       'id': timeStamp,
     };
-    http.post(url,body:body)
+    http.post(url,body:body, headers: this.headers)
       .then((response){
         callback(response);
       });
