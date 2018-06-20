@@ -21,7 +21,6 @@ class JSONRPCClient {
 
   call(method,params,callback(response)){
     var timeStamp = new DateTime.now().millisecondsSinceEpoch;
-    var client = new http.Client();
     var body = {
       'jsonrpc': "2.0",
       'method': method,
