@@ -13,10 +13,11 @@ class JSONRPCClient {
 
 // setHeader sets header for request
   setHeaders(headers){
-    if (!(headers is Map){
+    if (headers is Map){
+      this.headers = headers;
+    } else {
       return new TypeError();
     }
-    this.headers = headers;
   }
 
   call(method,params,callback(response)){
