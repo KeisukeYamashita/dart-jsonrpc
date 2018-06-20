@@ -13,7 +13,11 @@ class JSONRPCClient {
 
 // setHeader sets header for request
   setHeaders(headers){
-    this.headers = headers;
+    if (headers is Map){
+      this.headers = headers;
+    } else {
+      return new TypeError();
+    }
   }
 
   call(method,params,callback(response)){
@@ -24,7 +28,7 @@ class JSONRPCClient {
       'params': params,
       'id': timeStamp,
     };
-    http.post(url,body:body)
+    http.post(url,body:body, headers: this.headers)
       .then((response){
         callback(response);
       });
