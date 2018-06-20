@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class JSONRPCClient {
   String url;
-  Map<String:String> headers;
+  Map headers;
 
   JSONRPCClient(url){
     this.url = url;
